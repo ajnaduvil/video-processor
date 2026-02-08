@@ -38,3 +38,5 @@ Desktop.ini
 
 temp
 config.json
+*.log
+logs/
