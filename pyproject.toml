@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-processor"
+version = "0.0.0"
+description = "Batch video optimizer with FFmpeg and PySide6."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PySide6",
+]
+
+[project.scripts]
+video-processor = "video_processor.cli:main"
+video-processor-gui = "video_processor.gui.app:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
